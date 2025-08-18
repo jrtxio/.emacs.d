@@ -1,0 +1,39 @@
+;; ==============================
+;; Minimal Racket configuration
+;; ==============================
+
+(require 'package)
+(setq package-archives
+      '(("melpa" . "https://melpa.org/packages/")
+        ("gnu"   . "https://elpa.gnu.org/packages/")))
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+;; ------------------------------
+;; Paredit: structured editing
+;; ------------------------------
+(use-package paredit
+  :hook ((emacs-lisp-mode lisp-mode lisp-interaction-mode racket-mode) . paredit-mode))
+
+;; ------------------------------
+;; Racket-mode
+;; ------------------------------
+(use-package racket-mode
+  :mode ("\\.rkt\\'" . racket-mode)
+  :hook (racket-mode . racket-xp-mode) ;; enable enhanced features like syntax highlighting and jump
+  :config
+  ;; Bind keys
+  (define-key racket-mode-map (kbd "<f5>") 'racket-run)                 ; run entire program
+  (define-key racket-mode-map (kbd "<f10>") 'racket-send-last-sexp)    ; execute last expression
+  (define-key racket-mode-map (kbd "<f11>") 'racket-send-definition))  ; execute definition
+
+;; ------------------------------
+;; Optional: line numbers & spaces
+;; ------------------------------
+(global-display-line-numbers-mode t)
+(setq-default indent-tabs-mode nil)
