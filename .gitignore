@@ -1,17 +1,40 @@
-# Compiled
+# ==============================
+# Emacs compiled files
+# ==============================
 *.elc
 
-# Packaging
+# ==============================
+# Backup and auto-save files
+# ==============================
+*~
+*.bak
+*.swp
+*.swo
+.auto-save-list/
+*#*#
+
+# ==============================
+# Undo/redo tree files
+# ==============================
+*.~undo-tree
+
+# ==============================
+# Package management directories
+# ==============================
+.elpa/
 .cask/
 .eask/
 .eldev/
 .keg/
 
-# Built distribution
-dist/
+# ==============================
+# Cache and history
+# ==============================
+.cache/
+recentf/
+url/
 
-# Backup files
-*~
-
-# Undo-tree save-files
-*.~undo-tree
+# ==============================
+# Optional: custom variables
+# ==============================
+custom.el
