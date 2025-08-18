@@ -19,13 +19,9 @@
 *.~undo-tree
 
 # ==============================
-# Package management directories
+# Package management directory
 # ==============================
-.elpa/
-.cask/
-.eask/
-.eldev/
-.keg/
+elpa/
 
 # ==============================
 # Cache and history
@@ -33,8 +29,3 @@
 .cache/
 recentf/
 url/
-
-# ==============================
-# Optional: custom variables
-# ==============================
-custom.el
