@@ -25,12 +25,7 @@
 ;; ------------------------------
 (use-package racket-mode
   :mode ("\\.rkt\\'" . racket-mode)
-  :hook (racket-mode . racket-xp-mode) ;; enable enhanced features like syntax highlighting and jump
-  :config
-  ;; Bind keys
-  (define-key racket-mode-map (kbd "<f5>") 'racket-run)                 ; run entire program
-  (define-key racket-mode-map (kbd "<f10>") 'racket-send-last-sexp)    ; execute last expression
-  (define-key racket-mode-map (kbd "<f11>") 'racket-send-definition))  ; execute definition
+  :hook (racket-mode . racket-xp-mode)) ;; enable enhanced features like syntax highlighting and jump
 
 ;; ------------------------------
 ;; Optional: line numbers & spaces
