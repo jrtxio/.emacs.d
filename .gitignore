@@ -7,25 +7,96 @@
 # Backup and auto-save files
 # ==============================
 *~
+*#
 *.bak
 *.swp
 *.swo
-.auto-save-list/
-*#*#
+.#*
+\#*\#
+auto-save-list/
+backups/
 
 # ==============================
-# Undo/redo tree files
-# ==============================
-*.~undo-tree
-
-# ==============================
-# Package management directory
+# Package management directories
 # ==============================
 elpa/
+straight/
+quelpa/
+.cask/
 
 # ==============================
-# Cache and history
+# Cache and temporary files
 # ==============================
 .cache/
-recentf/
+transient/
+var/
+etc/
+places
+recentf
+bookmarks
+.last-package-update-day
+network-security.data
+tutorial/
+
+# ==============================
+# History files
+# ==============================
+history
+savehist
+eshell/history
+eshell/lastdir
+
+# ==============================
+# URL cache
+# ==============================
 url/
+request/
+
+# ==============================
+# Undo tree files
+# ==============================
+*.~undo-tree~
+
+# ==============================
+# Session files
+# ==============================
+session.*
+.session
+desktop
+desktop.lock
+
+# ==============================
+# LSP and completion cache
+# ==============================
+.lsp-session-*
+company-statistics-cache.el
+
+# ==============================
+# OS specific files
+# ==============================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+
+# ==============================
+# IDE/Editor files
+# ==============================
+.vscode/
+.idea/
+*.sublime-*
+
+# ==============================
+# Keep these files (examples)
+# ==============================
+# !init.el
+# !early-init.el
+# !custom.el
